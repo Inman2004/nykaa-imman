@@ -3,12 +3,13 @@ import {
   Instagram,
   MailOutline,
   Phone,
-  Pinterest,
   Room,
   Twitter,
+  GitHub,
 } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import {Link} from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -65,6 +66,9 @@ const List = styled.ul`
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  &:hover{
+    font-weight:bold;
+  }
 `;
 
 const Right = styled.div`
@@ -90,12 +94,13 @@ const Footer = () => {
       <Left>
         <Logo>NYKAA.</Logo>
         <Desc>
-        We have warm clothes in the Swedish fashion and we have thin clothes in the African fashion.
          Fashion is a source of looking better/attractive.
+         |
+         Sail into the sea Of fashion.
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
-            <Facebook />
+            <Link to='/Facebook'  style={{textDecoration:'none',color:"white"}}><Facebook /></Link>
           </SocialIcon>
           <SocialIcon color="E4405F">
             <Instagram />
@@ -103,36 +108,36 @@ const Footer = () => {
           <SocialIcon color="55ACEE">
             <Twitter />
           </SocialIcon>
-          <SocialIcon color="E60023">
-            <Pinterest />
+          <SocialIcon color="2a4b78">
+          <Link to='/GitHup'  style={{textDecoration:'none',color:"white"}}><GitHub/></Link>
           </SocialIcon>
         </SocialContainer>
       </Left>
       <Center>
         <Title>Useful Links</Title>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Man Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
-          <ListItem>Accessories</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
+        <ListItem><Link to='/' style={{textDecoration:'none',color:"black"}}>Home</Link></ListItem>
+          <ListItem><Link to='/Cart' style={{textDecoration:'none',color:"black"}}>Cart</Link></ListItem>
+          <ListItem><Link to='/' style={{textDecoration:'none',color:"black"}}>Man Fashion</Link></ListItem>
+          <ListItem><Link to='/' style={{textDecoration:'none',color:"black"}}>Woman Fashion</Link></ListItem>
+          <ListItem><Link to='/' style={{textDecoration:'none',color:"black"}}>Accessories</Link></ListItem>
+          <ListItem><Link to='/' style={{textDecoration:'none',color:"black"}}>My Account</Link></ListItem>
+          <ListItem><Link to='/' style={{textDecoration:'none',color:"black"}}>Order Tracking</Link></ListItem>
+          <ListItem><Link to='/' style={{textDecoration:'none',color:"black"}}>Wishlist</Link></ListItem>
+          <ListItem><Link to='/' style={{textDecoration:'none',color:"black"}}>Wishlist</Link></ListItem>
+          <ListItem><Link to='/' style={{textDecoration:'none',color:"black"}}>Terms</Link></ListItem>
         </List>
       </Center>
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight:"5px"}}/> W/M Nykaa Fashion  , South Sunshine Bay 600075
+          <Room style={{marginRight:"5px", color:"darkred"}}/> Nykaa W/M Fashion  , South Sunshine Bay 600075
         </ContactItem>
         <ContactItem>
-          <Phone style={{marginRight:"10px"}}/> +91 987 654 3210
+          <Phone style={{marginRight:"10px",color:"steelblue"}}/> +91 987 654 3210
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> Nykaacare@Gmail.com
+          <MailOutline style={{marginRight:"10px",color:"goldenrod"}} /> Nykaafashioncare@Gmail.com
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
