@@ -9,7 +9,7 @@ const SearchBar = () => (
             className="searchBar"
             type="text"
             id="header-search"
-            placeholder="Search Nykaa"
+            placeholder=" Search Nykaa"
             name="s" 
         />
     </form>

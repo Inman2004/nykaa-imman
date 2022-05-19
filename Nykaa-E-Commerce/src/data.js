@@ -2,10 +2,10 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/MNhdP0m/slider-2.png",
-      title: "SUMMER SALE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
+      img: "https://www.pinpng.com/pngs/m/52-524625_fashion-forward-episodes-offers-fashion-hd-png-download.png",
+      title: "Nykaa fashion",
+      desc: "Fashion is a source of looking better/attractive.",
+      bg: "f4e9f1",
     },
     {
       id: 2,
@@ -75,3 +75,4 @@ export const sliderItems = [
       img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
     },
   ]
+  
