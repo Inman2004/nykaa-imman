@@ -2,10 +2,10 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://www.pinpng.com/pngs/m/52-524625_fashion-forward-episodes-offers-fashion-hd-png-download.png",
-      title: "Nykaa fashion",
-      desc: "Fashion is a source of looking better/attractive.",
-      bg: "f4e9f1",
+      img: "https://i.ibb.co/YLxwwvp/slider1.png",
+      title: "NYKAA FASHION",
+      desc: "Fashion is a source of looking better & attractive.",
+      bg: "f6d6d6",
     },
     {
       id: 2,

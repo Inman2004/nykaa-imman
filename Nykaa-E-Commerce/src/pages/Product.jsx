@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import PositionedSnackbar from "../components/Alert";
 
 const Container = styled.div``;
 
@@ -103,7 +105,7 @@ const Amount = styled.span`
   margin: 0px 5px;
 `;
 
-const Button = styled.button`
+/*const Button = styled.button`
   padding: 15px;
   border: 2px solid teal;
   background-color: white;
@@ -113,7 +115,7 @@ const Button = styled.button`
   &:hover{
       background-color: #f8f4f4;
   }
-`;
+`; */
 
 const Product = () => {
   return (
@@ -157,8 +159,8 @@ const Product = () => {
               <Remove />
               <Amount>1</Amount>
               <Add />
-            </AmountContainer>
-            <Button>ADD TO CART</Button>
+            </AmountContainer> 
+            <PositionedSnackbar/>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
