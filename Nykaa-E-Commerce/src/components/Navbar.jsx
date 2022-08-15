@@ -1,11 +1,14 @@
-import { Avatar, Badge } from "@material-ui/core";
-import {ListOutlined, Search, ShoppingCartOutlined, HomeOutlined, PersonAdd, } from "@material-ui/icons";
+import { Avatar, Badge} from "@material-ui/core";
+import {Search, ShoppingCartOutlined, HomeOutlined, PersonAdd, } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import SearchBar from "./search";
 import Man from "./Images/person.jpeg";
+import DehazeOutlinedIcon from "@mui/icons-material/DehazeOutlined";
+
+
 const Container = styled.div`
   height: 60px;
   ${mobile({ height: "50px" })}
@@ -35,8 +38,15 @@ const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin-right: 20%;
   padding: 0px;
+  border-radius:15px;
+  border:2px solid #44107a;
+  transition: transform .2s;
+  &:active{
+    transform:scale(1.1);
+   
+  }
 `;
 
 const Input = styled.input`
@@ -94,18 +104,19 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <ListOutlined style={{ paddingRight: 23,textDecoration: 'none',color:"#44107a"}}><NavLink to='/Sidebar'/></ListOutlined>
+          <DehazeOutlinedIcon style={{ color: "#44107a", fontSize: 30,marginRight:"25px" }}></DehazeOutlinedIcon>
           <Language>EN</Language>
-          <SearchContainer>
-           <SearchBar />
-            <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
+          <NavLink to='/'><HomeOutlined style={{ color: "#44107a", fontSize: 30,marginLeft:"25px" }} /></NavLink>
         </Left>
         <Center>
           <Logo>NYKAA.</Logo>
         </Center>
         <Right>
-          <NavLink to='/'><HomeOutlined style={{ color: "#44107a", fontSize: 30 }} /></NavLink>
+          <SearchContainer>
+           <SearchBar />
+            <Search style={{ color: "#44107a", fontSize: 22 }} />
+          </SearchContainer>
+          
           <NavLink to='/Register'style={{ textDecoration: 'none'}}><MenuItem><PersonAdd/></MenuItem></NavLink>
           <NavLink to='/Cart'>
             <MenuItem>
@@ -114,11 +125,13 @@ const Navbar = () => {
             </Badge>
           </MenuItem></NavLink>
           <NavLink to='/Login'style={{ textDecoration: 'none'}}><MenuItem><Avatar src={Man} style={{ height:"35px",width:"35px" }}/></MenuItem></NavLink>
+          
         </Right>
       </Wrapper>
     </Container>
     
   );
+  
 };
 
 
